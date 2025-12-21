@@ -7,6 +7,7 @@ import {
   MantineProvider,
   mantineHtmlProps,
 } from "@mantine/core";
+import QueryProvider from "@/providers/QueryProvider";
 
 export const metadata = {
   title: "Zadanie rekrutacyjne - tabela produktów",
@@ -25,7 +26,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <QueryProvider>
+          <MantineProvider>{children}</MantineProvider>
+        </QueryProvider>
       </body>
     </html>
   );
