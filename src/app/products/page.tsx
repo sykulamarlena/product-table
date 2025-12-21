@@ -1,5 +1,5 @@
-import Products from "@/containers/Products";
 import { Container, Title } from "@mantine/core";
+import Products from "@/containers/Products";
 
 export default function ProductsPage() {
   return (

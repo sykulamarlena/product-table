@@ -1,8 +1,8 @@
 "use client";
 
+import { Center, Group, Loader, Pagination, Table } from "@mantine/core";
 import useTableParams from "@/hooks/useTableParams";
-import { Product } from "@/types/types";
-import { Table, Loader, Center, Pagination, Group } from "@mantine/core";
+import type { Product } from "@/types/types";
 
 type ProductsTableProps = {
   data?: Product[];
@@ -10,7 +10,11 @@ type ProductsTableProps = {
   params: URLSearchParams;
 };
 
-export default function ProductsTable({ data, isLoading, params }: ProductsTableProps) {
+export default function ProductsTable({
+  data,
+  isLoading,
+  params,
+}: ProductsTableProps) {
   const { setParams } = useTableParams();
 
   if (isLoading) {
@@ -23,7 +27,7 @@ export default function ProductsTable({ data, isLoading, params }: ProductsTable
 
   const renderPrice = (price: number) => {
     return `${price} zł`;
-  }
+  };
 
   const rows = data?.map((p: Product) => (
     <Table.Tr key={p.id}>
@@ -46,9 +50,13 @@ export default function ProductsTable({ data, isLoading, params }: ProductsTable
         </Table.Thead>
         <Table.Tbody>{rows}</Table.Tbody>
       </Table>
-       {/* TODO: Total pages should be fetched from API */}
-       {/* TODO: Fix pagination after filtering */}
-      <Pagination.Root total={5} value={page} onChange={(p) => setParams("page", String(p))}>
+      {/* TODO: Total pages should be fetched from API */}
+      {/* TODO: Fix pagination after filtering */}
+      <Pagination.Root
+        total={5}
+        value={page}
+        onChange={(p) => setParams("page", String(p))}
+      >
         <Group gap={5} justify="center">
           <Pagination.First />
           <Pagination.Previous />
@@ -59,4 +67,4 @@ export default function ProductsTable({ data, isLoading, params }: ProductsTable
       </Pagination.Root>
     </>
   );
-};
+}

@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## TODO
+<!-- - 
+Brakujące elementy w API:
+- wartość totalCount nie jest zwracana z API, a jest to wartość potrzebna do prawidłowego wyświetlania paginacji (w tym momencie ustawiłam stałą wartość)
+- brak wsparcia sortowania, API ignoruje wartości "sort" i "order" dlatego pominęłam ten select w widoku UI
+
+Brakujące elementy w widoku:
+- select do wyboru sortowania
+- informacja o wybranych filtrach
+- przycisk do resetu filtrów 
+- empty state dla pustej tabeli i po wybraniu filrów ("Brak produktów spełniających kryteria")
+
+Do ulepszenia:
+- obsługa błędów API
+- lepsze wyświetlanie loading statu dla tabeli 
+- dodanie testów
+- poprawa accessibility
+- naprawienie filtrowanie po cenie: price_min nie działa dopóki nie wybierze się price_max
+- dodanie debounce do filtrów price_min i price_max
+
+-->
