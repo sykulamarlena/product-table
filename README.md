@@ -37,7 +37,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 ## TODO
-<!-- - 
 Brakujące elementy w API:
 - wartość totalCount nie jest zwracana z API, a jest to wartość potrzebna do prawidłowego wyświetlania paginacji (w tym momencie ustawiłam stałą wartość)
 - brak wsparcia sortowania, API ignoruje wartości "sort" i "order" dlatego pominęłam ten select w widoku UI
@@ -55,5 +54,3 @@ Do ulepszenia:
 - poprawa accessibility
 - naprawienie filtrowanie po cenie: price_min nie działa dopóki nie wybierze się price_max
 - dodanie debounce do filtrów price_min i price_max
-
--->
